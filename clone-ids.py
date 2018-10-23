@@ -89,7 +89,7 @@ def simpan():
 		except:
 			tampil('\rm[!]Failed to save')
 def buka(d):
-	tampil('\rh[*]opening pls wait \rp'+d)
+	tampil('\rh[*]Loading friends ids \rp'+d)
 	try:
 		x = br.open(d)
 		br._factory.is_html = True
@@ -196,7 +196,7 @@ def idteman():
 			tampil('\rm[!]can only take \rp%d id'%len(id_bteman))
 			break
 	simpan()
-	i = inputD('[?]clone ids  directly (y/t)',['Y','T'])
+	i = inputD('[?]clone ids  directly (y/n)',['Y','N'])
 	if i.upper() == 'Y':
 		return crack(id_bteman)
 	else:
@@ -227,11 +227,11 @@ def crack(d):
 	i = inputD('[?]use Passwordlist/Manual (p/m)',['P','M'])
 	if i.upper() == 'P':
 		while 1:
-			dir = inputD('[?]Masukan alamat file')
+			dir = inputD('[?]Enter file path')
 			try:
 				D = open(dir,'r').readlines()
 			except:
-				tampil('\rm[!]enter file path%s'%dir)
+                                tampil('\rm[!]Enter file path%s'%dir)
 				continue
 			break
 		tampil('\rh[*]start crack with \rk%d password'%len(D))
