@@ -140,7 +140,7 @@ def saring_id_group1(d):
 def saring_id_group0():
 	global id_group
 	while 1:
-		id_group = inputD('[?]group id >>Ex>> 48857552164134')
+		id_group = inputD('[?]group id >>Ex>> 488575521641382')
 		tampil('\rh[*]Check the group....')
 		a = buka('https://m.facebook.com/browse/group/members/?id='+id_group+'&amp;start=0&amp;listType=list_nonfriend&amp;refid=18&amp;_rdc=1&amp;_rdr')
 		nama = ' '.join(re.findall(r'<title>(.*?)</title>',a)[0].split()[1:])
@@ -339,7 +339,7 @@ def menu():
 \rk############################################################
 #            \rb*Multi Bruteforce Attack*\rk                   ##
 # \rhCredit goes tot\r     #   Anas chawdhary...Dnt copy      \rk#
-# \rhfb group\rp  https://m.facebook.com/groups/488575521641482 \rk#
+# \rhfb group\rp  https://m.facebook.com/groups/488575521641382 \rk#
 # \rhGitHub\rp      https://github.com/Chawdhary007          \rk#
 #       \rmDo Not Use This Tool For IllegaL Purpos \rk         ##
 ##############################################################''')
