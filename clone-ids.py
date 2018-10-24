@@ -117,7 +117,7 @@ def login():
 		buka('https://mobile.facebook.com/home.php')
 		nama = br.find_link(url_regex='logout.php').text
 		nama = re.findall(r'\((.*a?)\)',nama)[0]
-		tampil('\rh[*]welcome\rk%s\n\rh[*]Best of Luck....'%nama)
+		tampil('\rh[*]welcome\rk%s\n\rh[*]check group link for group id..'%nama)
 		log = 1
 	elif 'checkpoint' in url:
 		tampil('\rm[!]Account gets Checkpoint\n\rk[!]try logining with opera')
@@ -247,7 +247,7 @@ def crack(d):
 	else:
 		return crack0(d,inputD('[?]password'),1)
 def crack0(data,sandi,p):
-	tampil('\rh[*] Cracking \ rk% d Account \ rh with password \  \rm[\rk%s\rm]'%(len(data),sandi))
+	tampil('\rh[*] Cracking % d Account with password \  \rm[\rk%s\rm]'%(len(data),sandi))
 	print('\033[32;1m[*]Cracking \033[31;1m[\033[36;1m0%\033[31;1m]\033[0m',end='')
 	os.sys.stdout.flush()
 	akun_jml = []
