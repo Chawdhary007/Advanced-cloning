@@ -291,7 +291,7 @@ def crack0(data,sandi,p):
 			keluar()
 	print('\r\033[32;1m[*]Cracking \033[31;1m[\033[36;1m100%\033[31;1m]\033[0m     ')
 	if len(akun_sukses) != 0:
-		tampil('\rh[*]Daftar akun sukses')
+		tampil('\rh[*]Register for successfull id')
 		for i in akun_sukses:
 			tampil('\rh==>\rk%s \rm[\rp%s\rm]'%(i,sandi))
 	tampil('\rh[*]nmbr of clone accounts\rp>>   %d'%len(akun_sukses))
