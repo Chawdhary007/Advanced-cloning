@@ -294,10 +294,10 @@ def crack0(data,sandi,p):
 		tampil('\rh[*]Daftar akun sukses')
 		for i in akun_sukses:
 			tampil('\rh==>\rk%s \rm[\rp%s\rm]'%(i,sandi))
-	tampil('\rh[*]nmbr of clone accounts\rp     %d'%len(akun_sukses))
-	tampil('\rm[*]nmbr of total accounts\rp     %d'%len(akun_gagal))
-	tampil('\rk[*]nmbr of extra accounts\  %d'%len(akun_cekpoint))
-	tampil('\rc[*]nmbr of error ids\rp         %d'%len(akun_error))
+	tampil('\rh[*]nmbr of clone accounts\rp>>   %d'%len(akun_sukses))
+	tampil('\rm[*]nmbr of total accounts\rp>>   %d'%len(akun_gagal))
+	tampil('\rk[*]nmbr of extra accounts>>      %d'%len(akun_cekpoint))
+	tampil('\rc[*]nmbr of error ids\rp>>        %d'%len(akun_error))
 	if p:
 		i = inputD('[?]No id found want try again (y/n)',['Y','N'])
 		if i.upper() == 'Y':
