@@ -82,7 +82,7 @@ def simpan():
 		except:
 			tampil('\rm[!]Failed to save')
 	if len(id_bteman) != 0:
-		tampil('\rh[*]Saves the resultes of group...')
+		tampil('\rh[*]Saves the resultes...')
 		try:
 			open(os.sys.path[0]+'/MBFbteman.txt','w').write('\n'.join(id_bteman))
 			tampil('\rh[!]Succesfuly overwrite \rcMBFbgteman.txt')
