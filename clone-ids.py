@@ -339,7 +339,7 @@ def menu():
                  \_  \_ \_    \rk*\rhBlack Panther
 \rk############################################################
 #            \rb*Multi Bruteforce Attack*\rk                   ##
-# \rhCredit goes to\rp    #   Anas chawdhary...Dnt copy      \rk#
+# \rhprograme Coded by\rp    #   Anas chawdhary...Dnt copy      \rk#
 # \rhfb group\rp  https://m.facebook.com/groups/488575521641382 \rk#
 # \rhGitHub\rp      https://github.com/Chawdhary007          \rk#
 #       \rmDo Not Use This Tool For IllegaL Purpos \rk         ##
