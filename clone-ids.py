@@ -248,7 +248,7 @@ def crack(d):
 	else:
 		return crack0(d,inputD('[?]password'),1)
 def crack0(data,sandi,p):
-	tampil('\rh[*] Cracking =>>>% d Account <<<<= with password => \rm[\rk%s\rm]'%(len(data),sandi))
+	tampil('\rh[*]Cracking =>>>% d Account <<<<= with password => \rm[\rk%s\rm]'%(len(data),sandi))
 	print('\033[32;1m[*]Cracking \033[31;1m[\033[36;1m0%\033[31;1m]\033[0m',end='')
 	os.sys.stdout.flush()
 	akun_jml = []
