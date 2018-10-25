@@ -248,7 +248,7 @@ def crack(d):
 	else:
 		return crack0(d,inputD('[?]password'),1)
 def crack0(data,sandi,p):
-	tampil('\rh[*]Cracking =>>>% d Account <<<<= with password => \rm[\rk%s\rm]'%(len(data),sandi))
+	tampil('\rh[*] Cracking =>>>% d Account <<<<= with password => \rm[\rk%s\rm]'%(len(data),sandi))
 	print('\033[32;1m[*]Cracking \033[31;1m[\033[36;1m0%\033[31;1m]\033[0m',end='')
 	os.sys.stdout.flush()
 	akun_jml = []
@@ -296,7 +296,7 @@ def crack0(data,sandi,p):
 			tampil('\rh==>\rk%s \rm[\rp%s\rm]'%(i,sandi))
 	tampil('\rh[*]nmbr of clone accounts\rp>>   %d'%len(akun_sukses))
 	tampil('\rm[*]nmbr of total accounts\rp>>   %d'%len(akun_gagal))
-	tampil('\rk[*]nmbr of extra accounts>>   %d'%len(akun_cekpoint))
+	tampil('\rk[*]nmbr of extra accounts>>    %d'%len(akun_cekpoint))
 	tampil('\rc[*]nmbr of error ids\rp>>        %d'%len(akun_error))
 	if p:
 		i = inputD('[?]No id found want try again (y/n)',['Y','N'])
@@ -328,22 +328,36 @@ def lanjutG():
 	return 0
 def menu():
 	tampil('''\rh
-                     .-.-..
-                    /+/++//
-                   /+/++//
-            \rk*   *\rh /+/++//
-             \ /  |/__//
-           {\rmX\rh}v{\rmX\rh}|\rcHunter\rh|==========.
-             [']  /'|'\           \\
-                 /  \  \           '
-                 \_  \_ \_    \rk*\rhBlack Panther
+      \rmLatest pro Updated pro version 2.0 (25\10\2O|8\rk
 \rk############################################################
-#            \rb*Multi Bruteforce Attack*\rk                   ##
-# \rhprograme Coded by\rp    #   Anas chawdhary...Dnt copy      \rk#
-# \rhfb group\rp  https://m.facebook.com/groups/488575521641382 \rk#
-# \rhGitHub\rp      https://github.com/Chawdhary007          \rk#
-#       \rmDo Not Use This Tool For IllegaL Purpos \rk         ##
-##############################################################''')
+#  mm       #                                         #
+   ##    mmm#  m   m   mmm   m mm    mmm    mmm    mmm#
+  #  #  #" "#  "m m"  "   #  #"  #  #"  "  #"  #  #" "#
+  #mm#  #   #   #m#   m"""#  #   #  #      #""""  #   #
+ #    # "#m##    #    "mm"#  #   #  "#mm"  "#mm"  "#m##
+
+     ___ ____         ____ _             _
+    |_ _|  _ \ ___   / ___| | ___  _ __ (_)_ __   __ _
+     | || | | / __| | |   | |/ _ \| '_ \| | '_ \ / _` |
+     | || |_| \__ \ | |___| | (_) | | | | | | | | (_| |
+    \rh|___|____/|___/  \____|_|\___/|_| |_|_|_| |_|\__, |\rp
+                                                  |___/
+
+ _________________________________
+/ This programme is coded by      \\
+
+\      \rhAnas Chawdhary\rp             /
+ ---------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )/\/
+                 ||---w |
+                 ||    ||
+################################################################
+# \rhfb group\rp==>    https://m.facebook.com/groups/488575521641382 \rk#
+#  \rhGitHub\rp====>    https://github.com/Chawdhary007          \rk    #
+#       \rmDo Not Use This Tool For IllegaL Purpos \rk               #
+################################################################''')   #
 	tampil('''\rk%s\n\rc1 clone ids from group\n\rc2 clone ids from friendlist\n\rc3 Exit\n\rk%s'''%('#'*20,'#'*20))
 	i = inputM('[?]Choose',[1,2,3])
 	if i == 1:
