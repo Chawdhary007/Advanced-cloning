@@ -16,7 +16,7 @@ $ apt update && apt upgrade
 $ apt install git python2 
 $ pip2 install mechanize
 $ https://github.com/Chawdhary007/Advanced-cloning.git
-$ cd Advanced-clonin
+$ cd Advanced-cloning
 ```
 
 # [ Running ]
